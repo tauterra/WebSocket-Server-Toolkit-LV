@@ -8,7 +8,6 @@
 
 </Property>
 	<Item Name="classes" Type="Folder">
-		<Item Name="WebSocket Connection Handler.lvclass" Type="LVClass" URL="../classes/WebSocket Connection Handler/WebSocket Connection Handler.lvclass"/>
 		<Item Name="WebSocket Connection.lvclass" Type="LVClass" URL="../classes/WebSocket Connection/WebSocket Connection.lvclass"/>
 	</Item>
 	<Item Name="subVIs" Type="Folder">
@@ -52,5 +51,7 @@
 		<Item Name="status_code.ctl" Type="VI" URL="../types/status_code.ctl"/>
 	</Item>
 	<Item Name="LICENSE" Type="Document" URL="../LICENSE"/>
+	<Item Name="README.md" Type="Document" URL="../README.md"/>
+	<Item Name="WebSocket Connection Handler.lvclass" Type="LVClass" URL="../classes/WebSocket Connection Handler/WebSocket Connection Handler.lvclass"/>
 	<Item Name="WebSocket Listen.vi" Type="VI" URL="../WebSocket Listen.vi"/>
 </Library>
