@@ -5,6 +5,9 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
+	<Item Name="subVIs" Type="Folder">
+		<Item Name="process queue.vi" Type="VI" URL="../subVIs/process queue.vi"/>
+	</Item>
 	<Item Name="Echo Server Main.vi" Type="VI" URL="../Echo Server Main.vi"/>
 	<Item Name="WebSocket Echo Server.lvclass" Type="LVClass" URL="../WebSocket Echo Server.lvclass"/>
 	<Item Name="LICENSE" Type="Document" URL="../LICENSE"/>
