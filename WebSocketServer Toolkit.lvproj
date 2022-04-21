@@ -43,7 +43,15 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="WebSocket Echo Server.lvlib" Type="Library" URL="../WebSocket Echo Server/WebSocket Echo Server.lvlib"/>
+		<Item Name="WebSocket Echo Server" Type="Folder">
+			<Item Name="subVIs" Type="Folder">
+				<Item Name="process queue.vi" Type="VI" URL="../WebSocket Echo Server/subVIs/process queue.vi"/>
+			</Item>
+			<Item Name="Echo Server Main.vi" Type="VI" URL="../WebSocket Echo Server/Echo Server Main.vi"/>
+			<Item Name="LICENSE" Type="Document" URL="../WebSocket Echo Server/LICENSE"/>
+			<Item Name="WebSocket Echo Server.lvclass" Type="LVClass" URL="../WebSocket Echo Server/WebSocket Echo Server.lvclass"/>
+		</Item>
+		<Item Name="WebSocket Server Getting Started Helper.vi" Type="VI" URL="../WebSocket Server Toolkit/WebSocket Server Getting Started Helper.vi"/>
 		<Item Name="WebSocket Server Toolkit.lvlib" Type="Library" URL="../WebSocket Server Toolkit/WebSocket Server Toolkit.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -59,48 +67,101 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
-			<Item Name="TauTerra WebSocketServer Toolkit" Type="Packed Library">
+			<Item Name="TauTerra WebSocketServer Toolkit Dist" Type="Source Distribution">
+				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{A85D8726-9A8F-4CFC-935C-987718397355}</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">TauTerra WebSocketServer Toolkit Dist</Property>
+				<Property Name="Bld_excludedDirectory[0]" Type="Path">vi.lib</Property>
+				<Property Name="Bld_excludedDirectory[0].pathType" Type="Str">relativeToAppDir</Property>
+				<Property Name="Bld_excludedDirectory[1]" Type="Path">resource/objmgr</Property>
+				<Property Name="Bld_excludedDirectory[1].pathType" Type="Str">relativeToAppDir</Property>
+				<Property Name="Bld_excludedDirectory[2]" Type="Path">/C/ProgramData/National Instruments/InstCache/19.0</Property>
+				<Property Name="Bld_excludedDirectory[3]" Type="Path">/C/Users/Nicholas Folse/Documents/LabVIEW Data/2019(32-bit)/ExtraVILib</Property>
+				<Property Name="Bld_excludedDirectory[4]" Type="Path">instr.lib</Property>
+				<Property Name="Bld_excludedDirectory[4].pathType" Type="Str">relativeToAppDir</Property>
+				<Property Name="Bld_excludedDirectory[5]" Type="Path">user.lib</Property>
+				<Property Name="Bld_excludedDirectory[5].pathType" Type="Str">relativeToAppDir</Property>
+				<Property Name="Bld_excludedDirectoryCount" Type="Int">6</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/NI_AB_PROJECTNAME/TauTerra WebSocketServer Toolkit Dist</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{2FA397E6-3E32-420F-A8A2-6B188BB0F7FD}</Property>
+				<Property Name="Bld_removeVIObj" Type="Int">1</Property>
+				<Property Name="Bld_version.build" Type="Int">1</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Destination[0].destName" Type="Str">Destination Directory</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/TauTerra WebSocketServer Toolkit Dist</Property>
+				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/data</Property>
+				<Property Name="Destination[2].destName" Type="Str">Examples</Property>
+				<Property Name="Destination[2].path" Type="Path">../builds/NI_AB_PROJECTNAME/Examples</Property>
+				<Property Name="DestinationCount" Type="Int">3</Property>
+				<Property Name="Source[0].itemID" Type="Str">{4257E9E7-1529-448B-A521-B62EADA3A3A2}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/WebSocket Server Toolkit.lvlib</Property>
+				<Property Name="Source[1].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[1].type" Type="Str">Library</Property>
+				<Property Name="Source[2].Container.applyDestination" Type="Bool">true</Property>
+				<Property Name="Source[2].Container.applyInclusion" Type="Bool">true</Property>
+				<Property Name="Source[2].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[2].destinationIndex" Type="Int">2</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/WebSocket Echo Server</Property>
+				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[2].type" Type="Str">Container</Property>
+				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/My Computer/WebSocket Server Getting Started Helper.vi</Property>
+				<Property Name="Source[3].sourceInclusion" Type="Str">Include</Property>
+				<Property Name="Source[3].type" Type="Str">VI</Property>
+				<Property Name="SourceCount" Type="Int">4</Property>
+			</Item>
+			<Item Name="TauTerra WebSocketServer Toolkit LVLIBP" Type="Packed Library">
 				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
 				<Property Name="Bld_buildCacheID" Type="Str">{B3362208-8FF3-498C-9D2A-44CC0C825032}</Property>
-				<Property Name="Bld_buildSpecName" Type="Str">TauTerra WebSocketServer Toolkit</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">TauTerra WebSocketServer Toolkit LVLIBP</Property>
 				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
 				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
-				<Property Name="Bld_localDestDir" Type="Path">../builds/NI_AB_PROJECTNAME/TauTerra WebSocketServer Toolkit</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../builds/NI_AB_PROJECTNAME/TauTerra WebSocketServer Toolkit LVLIBP</Property>
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToCommon</Property>
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{7B72DDA8-86F0-41BC-9D81-E1D47BA6EA1B}</Property>
-				<Property Name="Bld_version.build" Type="Int">6</Property>
+				<Property Name="Bld_version.build" Type="Int">7</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">TauTerra WebSocketServer Toolkit.lvlibp</Property>
-				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/TauTerra WebSocketServer Toolkit/TauTerra WebSocketServer Toolkit.lvlibp</Property>
+				<Property Name="Destination[0].path" Type="Path">../builds/NI_AB_PROJECTNAME/TauTerra WebSocketServer Toolkit LVLIBP/TauTerra WebSocketServer Toolkit.lvlibp</Property>
 				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
 				<Property Name="Destination[0].type" Type="Str">App</Property>
 				<Property Name="Destination[1].destName" Type="Str">Support Directory</Property>
-				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/TauTerra WebSocketServer Toolkit</Property>
+				<Property Name="Destination[1].path" Type="Path">../builds/NI_AB_PROJECTNAME/TauTerra WebSocketServer Toolkit LVLIBP</Property>
 				<Property Name="DestinationCount" Type="Int">2</Property>
 				<Property Name="PackedLib_callersAdapt" Type="Bool">true</Property>
-				<Property Name="Source[0].itemID" Type="Str">{9BD5D308-0E72-4DFE-A633-B1336AB9BA84}</Property>
+				<Property Name="Source[0].itemID" Type="Str">{4257E9E7-1529-448B-A521-B62EADA3A3A2}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/WebSocket Echo Server.lvlib</Property>
-				<Property Name="Source[1].Library.allowMissingMembers" Type="Bool">true</Property>
-				<Property Name="Source[1].type" Type="Str">Library</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/WebSocket Server Toolkit.lvlib/LICENSE</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[2].itemID" Type="Ref">/My Computer/WebSocket Server Toolkit.lvlib/LICENSE</Property>
-				<Property Name="Source[3].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[3].itemID" Type="Ref">/My Computer/WebSocket Server Toolkit.lvlib</Property>
-				<Property Name="Source[3].Library.allowMissingMembers" Type="Bool">true</Property>
-				<Property Name="Source[3].Library.atomicCopy" Type="Bool">true</Property>
-				<Property Name="Source[3].Library.LVLIBPtopLevel" Type="Bool">true</Property>
-				<Property Name="Source[3].preventRename" Type="Bool">true</Property>
-				<Property Name="Source[3].sourceInclusion" Type="Str">TopLevel</Property>
-				<Property Name="Source[3].type" Type="Str">Library</Property>
-				<Property Name="SourceCount" Type="Int">4</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/WebSocket Server Toolkit.lvlib</Property>
+				<Property Name="Source[2].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[2].Library.atomicCopy" Type="Bool">true</Property>
+				<Property Name="Source[2].Library.LVLIBPtopLevel" Type="Bool">true</Property>
+				<Property Name="Source[2].preventRename" Type="Bool">true</Property>
+				<Property Name="Source[2].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[2].type" Type="Str">Library</Property>
+				<Property Name="Source[3].destinationIndex" Type="Int">1</Property>
+				<Property Name="Source[3].itemID" Type="Ref">/My Computer/WebSocket Server Getting Started Helper.vi</Property>
+				<Property Name="Source[3].type" Type="Str">VI</Property>
+				<Property Name="Source[4].Container.applyDestination" Type="Bool">true</Property>
+				<Property Name="Source[4].Container.depDestIndex" Type="Int">0</Property>
+				<Property Name="Source[4].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[4].itemID" Type="Ref">/My Computer/WebSocket Echo Server</Property>
+				<Property Name="Source[4].type" Type="Str">Container</Property>
+				<Property Name="SourceCount" Type="Int">5</Property>
 				<Property Name="TgtF_companyName" Type="Str">TauTerra, LLC</Property>
-				<Property Name="TgtF_fileDescription" Type="Str">TauTerra WebSocketServer Toolkit</Property>
-				<Property Name="TgtF_internalName" Type="Str">TauTerra WebSocketServer Toolkit</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">TauTerra WebSocketServer Toolkit LVLIBP</Property>
+				<Property Name="TgtF_internalName" Type="Str">TauTerra WebSocketServer Toolkit LVLIBP</Property>
 				<Property Name="TgtF_legalCopyright" Type="Str">Copyright © 2021 TauTerra, LLC</Property>
-				<Property Name="TgtF_productName" Type="Str">TauTerra WebSocketServer Toolkit</Property>
+				<Property Name="TgtF_productName" Type="Str">TauTerra WebSocketServer Toolkit LVLIBP</Property>
 				<Property Name="TgtF_targetfileGUID" Type="Str">{FB071114-006E-48BD-B01D-3259501A0A3E}</Property>
 				<Property Name="TgtF_targetfileName" Type="Str">TauTerra WebSocketServer Toolkit.lvlibp</Property>
 				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
@@ -134,11 +195,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 				<Property Name="Source[0].itemID" Type="Str">{40E4DC08-08D7-4A0B-B56A-269CDE6DF872}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/My Computer/WebSocket Echo Server.lvlib/Echo Server Main.vi</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/My Computer/WebSocket Echo Server/Echo Server Main.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="Source[2].destinationIndex" Type="Int">2</Property>
-				<Property Name="Source[2].itemID" Type="Ref">/My Computer/WebSocket Echo Server.lvlib/LICENSE</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/My Computer/WebSocket Echo Server/LICENSE</Property>
 				<Property Name="Source[2].sourceInclusion" Type="Str">Include</Property>
 				<Property Name="SourceCount" Type="Int">3</Property>
 				<Property Name="TgtF_fileDescription" Type="Str">WebSocket Echo Server</Property>

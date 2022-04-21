@@ -61,5 +61,4 @@
 	<Item Name="WebSocket Connection Handler.lvclass" Type="LVClass" URL="../classes/WebSocket Connection Handler/WebSocket Connection Handler.lvclass"/>
 	<Item Name="WebSocket Queue Logger.lvclass" Type="LVClass" URL="../classes/WebSocket Queue Logger/WebSocket Queue Logger.lvclass"/>
 	<Item Name="WebSocket Listen.vi" Type="VI" URL="../WebSocket Listen.vi"/>
-	<Item Name="WebSocket Server Getting Started Helper.vi" Type="VI" URL="../WebSocket Server Getting Started Helper.vi"/>
 </Library>
